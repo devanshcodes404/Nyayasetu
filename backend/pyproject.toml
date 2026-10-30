@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyayasetu-ai-backend"
+version = "0.1.0"
+description = "FastAPI backend for NyayaSetu AI Court Case Management & Legal Research Platform"
+readme = "../README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.34.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "sqlalchemy>=2.0.30",
+    "alembic>=1.14.0",
+    "psycopg2-binary>=2.9.9",
+    "pgvector>=0.3.6",
+    "argon2-cffi>=23.1.0",
+    "pyjwt>=2.10.0",
+    "python-multipart>=0.0.20",
+    "python-dotenv>=1.0.1",
+    "datasets>=3.0.0",
+    "PyMuPDF>=1.25.0",
+    "python-docx>=1.1.0",
+    "requests>=2.32.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["app/tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+
